@@ -4,6 +4,8 @@ $small: 480px;
 $medium: 800px;
 $large: 1000px;
 
+$accent: #333;
+
 /* CSS reset by Andy Bell https://hankchizljaw.com/wrote/a-modern-css-reset/ */
 
 /* Box sizing rules */
@@ -95,4 +97,12 @@ header {
             padding:0em 1em;
         }
     }
+}
+
+.home {
+    text-decoration:none;
+}
+
+a:visited {
+    color: $accent;
 }
