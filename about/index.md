@@ -1,10 +1,11 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: About
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
 
-I am a person that writes stuff.
+My name is Finley Chen, I'm a freelance Web Developer.
+I created this site because I wanted to see the types of companies that might be hiring for web developer jobs.
