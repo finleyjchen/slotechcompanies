@@ -1,15 +1,9 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
-  "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
-  },
+  "title": "SLO Tech Companies",
+  "url": "https://slotechcompanies.com/",
+  "description": "A list of known technology companies with offices in San Luis Obispo, CA.",
   "author": {
-    "name": "Your Name Here",
+    "name": "Finley Chen",
     "email": "youremailaddress@example.com"
   }
 }
