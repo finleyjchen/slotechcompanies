@@ -86,6 +86,7 @@ body {
   margin: auto;
   padding: 1em;
   font-family: system-ui, sans-serif;
+  
 }
 
 header {
@@ -124,6 +125,7 @@ a:visited {
 
 .postlist {
   .postlist-item {
+    margin: 1em 0;
     padding: 1em;
     background-color: #f1f1f1;
     display: flex;
@@ -132,7 +134,7 @@ a:visited {
     a {
       text-decoration: none;
       transition: color .4s ease-in;
-
+        
       &:hover {
         color: $accent;
       }
@@ -153,8 +155,8 @@ a:visited {
     .tags {
       
       .tag {
-        background-color:$accent;
-        color:#fff;
+        color:$accent;
+
         border-radius:4px;
         width: auto;
         font-size:0.8em;
