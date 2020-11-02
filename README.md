@@ -1,5 +1,5 @@
 # SLO Tech Companies
-This website was made to compile a list of active tech companies with offices located in San Luis Obispo, CA. Based off [elevent-base-blog](https://github.com/11ty/eleventy-base-blog).
+This website was made to compile a list of active tech companies with offices located in San Luis Obispo, CA. Based off [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
 
 ## Getting Started
 
