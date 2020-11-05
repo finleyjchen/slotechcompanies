@@ -86,7 +86,8 @@ body {
   margin: auto;
   padding: 1em;
   font-family: system-ui, sans-serif;
-  
+  font-family: 'Space Grotesk', sans-serif;
+
 }
 
 header {
@@ -107,8 +108,11 @@ header {
   }
 }
 
+h1 {
+    padding-bottom:1em;
+}
+
 .home {
-  font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.3;
@@ -147,9 +151,14 @@ a:visited {
       .postlist-link {
         font-size: 1.4em;
         font-weight: 700;
+        color:$accent;
+
       }
 
-      .postlist-job-link {}
+      .postlist-job-link {
+        color:$accent;
+
+      }
     }
 
     .tags {
