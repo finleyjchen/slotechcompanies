@@ -11,15 +11,8 @@
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      <li class="nav-item"><a href="/about">About</a></li>
-      {# {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %} #}
-      </ul>
+      <h1 class="title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      <p class="subtitle">An open-source list of known technology companies with offices in San Luis Obispo, CA.</p>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -27,7 +20,9 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      <a href="/about">About</a>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
