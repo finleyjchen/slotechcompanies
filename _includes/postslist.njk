@@ -9,11 +9,9 @@
       {%- endif -%}
     {% endfor %}
   </div> #}
-  <div class="postlist-links">
-    <a href="{{ post.data.homePage | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <a href="{{ post.data.homePage | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}<span class="link-text">{{ post.data.homePage | url }}</span></a>
     {# <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> #}
-    <a href="{{ post.data.jobsPage | url }}" class="postlist-job-link">View Jobs &rarr;</a>
-    </div>
+    {# <a href="{{ post.data.jobsPage | url }}" class="postlist-job-link">View Jobs &rarr;</a> #}
 
   </li>
 {% endfor %}

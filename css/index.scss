@@ -6,6 +6,22 @@ $large: 1000px;
 
 $accent: #133f2e;
 
+/* FONT FACE */
+@font-face {
+  font-family: Suisse;
+  src: url('/css/fonts/SuisseIntl-Light-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: Suisse;
+  src: url('/css/fonts/SuisseIntl-Book-WebS.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* CSS reset by Andy Bell https://hankchizljaw.com/wrote/a-modern-css-reset/ */
 
 /* Box sizing rules */
@@ -82,24 +98,38 @@ select {
 /* BEGIN Custom Styles */
 
 body {
-  max-width: $large;
-  margin:auto;
   font-family: system-ui, sans-serif;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: Suisse, sans-serif;
   padding:2em;
   font-size:12px;
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 5vw;
+  background-color: #111;
+  color: #fff;
+  font-weight:300;
+
   @media screen and (min-width:$medium) {
     font-size:16px;
+    padding: 0 15vw;
   }
+}
+
+header, .text-grid {
+  a {
+    color: rgb(204, 204, 204);
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
+
 }
 
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
-  padding-bottom:2em;
-  border-bottom:4px dashed $accent;
+  padding:2em 0;
   a {
     text-decoration: none;
   }
@@ -116,73 +146,105 @@ header {
 h1 {
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:6em;
+}
+
 .title {
-  font-size: 4em;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   line-height: 1;
-  margin-bottom:0.5em;
-  text-align: center;
+  font-size:1.25em;
+  font-weight: 300;
 }
 
 .subtitle {
-  max-width:45ch;
-  font-size:1.2em;
-  margin:auto;
-  text-align: center;
+  max-width:35ch;
+  font-size:2em;
+  margin-bottom:4em;
+  small {
+    display:block;
+    font-size: 0.5em;
+    color: #909090;
+    margin-top:0.5em;
+  }
+}
+
+.lead {
+  max-width: 45ch;
+  font-size: 1.5em;
+  line-height:1.5;
+  margin-bottom: 2.5em;
+}
+
+p {
+  margin-bottom: 1.25em;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.text-grid {
+  display: grid;
+  grid-gap: 2em;
+  max-width: $medium;
+  // font-weight: 400;
+  @media (min-width: $medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 a:visited {
-  color: $accent;
+  color: #fff;
 }
 
 .main,
 .post {
   padding: 2em 0em;
+  padding-bottom:10em;
+
 }
 
 .postlist {
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  @media screen and (min-width:$medium) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-  }
-  grid-gap:2em;
 
   .postlist-item {
-    margin: 1em 0;
-    padding: 1em;
+
     display: flex;
-    flex-direction: column;
-    border:1px solid $accent;
     a {
       text-decoration: none;
       transition: color .4s ease-in;
         
       &:hover {
-        color: $accent;
+        color: #fff;
         text-decoration: underline;
       }
     }
 
-    .postlist-links {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+
       .postlist-link {
-        font-size: 1.4em;
-        font-weight: 700;
-        color:$accent;
-
+        font-size: 1.7em;
+        color:rgba(255,255,255,0.9);
+        border-bottom:2px solid rgb(75, 75, 75);
+        padding: 1em 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: border 0.36s ease-out 0s;
+        flex-direction: column;
+        @media (min-width: $medium) {
+          align-items: center;
+          flex-direction: row;
+        }
+        .link-text {
+          color: #909090;
+          font-size: 0.75em;
+        }
+        &:hover {
+          cursor: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-arrow-up-right'%3E%3Cline x1='7' y1='17' x2='17' y2='7'%3E%3C/line%3E%3Cpolyline points='7 7 17 7 17 17'%3E%3C/polyline%3E%3C/svg%3E") 16 16, pointer;
+          border-bottom:2px solid rgb(255,255,255);
+          text-decoration: none;
+        }
       }
 
-      .postlist-job-link {
-        color:$accent;
-
-      }
-    }
 
     .tags {
       

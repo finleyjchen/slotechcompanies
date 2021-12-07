@@ -4,24 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <meta name="Description" content="An open-source list of known technology companies with offices in San Luis Obispo, CA.">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
   </head>
   <body>
     <header>
-      <h1 class="title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      <p class="subtitle">An open-source list of known technology companies with offices in San Luis Obispo, CA.</p>
+      <nav>
+      <h1 class="title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>       <a href="/submit">About &amp; Submit</a>
+      </nav>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-     
       {{ content | safe }}
     </main>
 
     <footer>
-      <a href="/about">About</a>
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
