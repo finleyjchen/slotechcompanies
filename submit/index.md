@@ -18,8 +18,8 @@ I created this directory to evaluate the available tech companies to work for as
 
 This simple site is a personal project created with [Eleventy](https://www.11ty.dev/), hosted on [Netlify](https://www.netlify.com/), and the data is stored in markdown on [Github](https://github.com/finleyjchen/slotechcompanies). It was built by [me](https://finleychen.dev). I have since moved to Cambridge, Massachussetts, but still would love to see the directory grow and support other students, recent grads, and other  here in SLO.
 
+Want to add a company? [Make a pull request](https://github.com/finleyjchen/slotechcompanies/blob/master/CONTRIBUTING.md) (submission form coming soon)
 </div>
 
 
-Want to add a company? [Make a pull request](https://github.com/finleyjchen/slotechcompanies/blob/master/CONTRIBUTING.md) (form coming soon)
 
